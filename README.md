@@ -121,3 +121,29 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 * **View 4: Sigla Provincia Lookup**
     ![Screenshot 4 showing final Province details lookup](assets/screenshot_province.png)
     *Caption: XLOOKUP is used to finalize geographical details, retrieving the 'Sigla Provincia'.*
+
+---
+## 📈 Pivot Table Analysis
+
+Following the data enrichment, a Pivot Table was created to quickly analyze the distribution of school types across the different provinces.
+
+### Pivot Table Structure
+
+A new sheet, **"PivotTable"**, was created with the following structure:
+
+* **Rows:** "Tipologia di scuola" and "Provincia"
+* **Values:** Count of "Tipologia di scuola" (to count the number of schools)
+
+This configuration allows for drilling down into the specific count of each school type per province.
+
+### Visual Analysis
+
+* **Screenshot 6: Structure Overview**
+    ![Screenshot 6 showing Pivot Table Structure](assets/screenshot_pivottable_structure.png)
+    *Caption: The structure of the Pivot Table Analysis, showing "Tipologia di scuola" (type of school) in the first column, grouped by type.*
+
+* **Screenshot 7: Expanded View (Liceo Scientifico)**
+    ![Screenshot 7 showing Liceo Scientifico expansion](assets/screenshot_liceo_scientifico_expanded.png)
+    *Caption: Detailed view of the 'Liceo Scientifico' category, showing a total of 1,029 schools distributed alphabetically across the various provinces (e.g., 8 in Agrigento, 7 in Alessandria, 10 in Ancona).*
+
+---
