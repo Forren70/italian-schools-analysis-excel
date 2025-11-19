@@ -9,7 +9,14 @@ This analysis project aims to provide a clear, structured framework for explorin
 * **Data Normalization:** To transform the complex source data into an easily consumable, relational Excel format, facilitating further analysis and custom querying by end-users.
 * **Geographical Distribution:** To analyze the concentration and distribution of educational institutions across Italy's regions and provinces, identifying potential regional disparities.
 * **School Type Profiling:** To categorize and compare the number of institutions based on their **Tipologia** (school type) to profile the educational system's structure.
-* **Foundation for Further Study:** To serve as a validated and reliable starting point for advanced socio-economic or demographic studies.
+* **Foundation for Further Study:** To serve as a validated and reliable starting point for further socio-economic or demographic studies.
+
+---
+### 🖼️ Project Overview
+
+This image represents the final result of the analysis, specifically the Choropleth Map showing the **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions):
+
+![Project Overview Screenshot](assets/project_cover.png)
 
 ---
 
