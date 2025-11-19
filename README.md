@@ -19,7 +19,6 @@ The source data is openly published by the Ministry of Education (MIUR).
 **Source Link:** [Dati Istruzione (MIUR) - Distribuzione 2025/2026](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Scuole)
 *(To download the original CSV file, click on “Distribuzione per ANNOSCOLASTICO 202526” on the source page.)*
 
-<<<<<<< HEAD
 ---
 
 ## 🏛️ Main Data Sheet: "scuole"
@@ -32,25 +31,14 @@ The "scuole" sheet holds the core institutional data. Below is a detailed descri
 | **CodiceScuola** | *Official alphanumeric Ministry of Education code for the school.* |
 | **DenominazioneScuola** | *Full, official name of the school.* |
 | **ComuneID** | *Foreign key linking the school to the corresponding Comune (municipality) in the "comuni" lookup sheet.* |
-| **TipologiaID** | *Foreign key linking the school to the corresponding school type (e.g., Liceo, Istituto Tecnico) in the "tipologie" lookup sheet.* |
+| **TipologiaID** | *Foreign key linking the school to the corresponding school type (Tipo di scuola) in the "tipologie" lookup sheet.* |
 
-### Data Structure Visual 
+### Data Structure Visual
 
 The structure of the main sheet is shown below for quick reference:
 
 ![Structure of the "scuole" sheet](assets/struttura_foglio_scuole.png)
 
 *Caption: The first columns of the "scuole" sheet, which uniquely identify each institution and link it to the lookup tables (Comuni and Tipologie).*
-=======
-### Structure of the Main Sheet "scuole"
 
-The `School_Analysis.xlsx` file contains several worksheets. Below is the structure of the main sheet ("scuole"), which holds the essential registration data for the schools:
-
-<div align="center">
-    ![Structure of the "scuole" sheet](assets/struttura_foglio_scuole.png)
-    
-    <p style="font-size: small; color: gray;">
-        *Caption: The first columns of the "scuole" sheet, which uniquely identify each institution and link it to the lookup tables (Comuni and Tipologie).*
-    </p>
-</div>
->>>>>>> 669b0faef382ba8078ed1c8658f3c2ab16039e04
+---
