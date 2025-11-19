@@ -147,3 +147,29 @@ This configuration allows for drilling down into the specific count of each scho
     *Caption: Detailed view of the 'Liceo Scientifico' category, showing a total of 1,029 schools distributed alphabetically across the various provinces (e.g., 8 in Agrigento, 7 in Alessandria, 10 in Ancona).*
 
 ---
+### Analysis Refinement: Granularity by Municipality
+
+By further modifying the Pivot Table structure and adding the **"Comune"** field to the **Rows** area, the analysis achieves a finer level of detail. This action allows the count of each type of school to be displayed not just by Province, but broken down by individual Municipality.
+
+* **Screenshot 8: Adding Municipality to Rows**
+    ![Screenshot 8 showing adding Comune to Pivot Table Rows](assets/screenshot_comune_in_rows.png)
+    *Caption: The structure of the Pivot Table after adding the 'Comune' field to the Rows area for deeper geographic granularity.*
+
+    ### Visualizing Distribution: Bar Charts Analysis
+
+To better visualize the quantitative differences between school types, data from the Pivot Table was copied and pasted into a new sheet, **"Bar Charts Tipologia Scuola"**.
+
+A bar chart, titled **"Conteggio tipologia scuola per Provincia"** (Count of school types per Province), was created and sorted in descending order based on the count.
+
+#### Key Findings & Visualization Adjustments:
+
+The analysis immediately highlights the dominance of categories like **Scuola primaria** (Primary school), **Infanzia**, **Primo grado**, and **Istituto comprensivo**.
+
+The disparity in school count is significant (e.g., 15,681 records for "Scuola primaria" versus 1-2 records for less common types like "Ist Prof Industria E Artigianato Per Ciechi"). This extreme difference necessitates an adjustment for effective visualization:
+
+* **Linear Scale (Standard):** Fails to properly display the count of the less common school types.
+    ![Screenshot 8 Bar Chart Linear Scale](assets/screenshot_barchart_linear.png)
+* **Logarithmic Scale:** To better display the differences among the less represented school types, the Y-axis was formatted to use a logarithmic scale (Right click axis -> Format Axis -> Logarithmic scale selected).
+    ![Screenshot 9 Bar Chart Logarithmic Scale](assets/screenshot_barchart_logarithmic.png)
+
+---
