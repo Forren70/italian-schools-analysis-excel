@@ -19,4 +19,4 @@ The source data is openly published by the Ministry of Education (MIUR).
 **Source Link:** [Dati Istruzione (MIUR) - Distribuzione 2025/2026](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Scuole)
 *(To download the original CSV file, click on “Distribuzione per ANNOSCOLASTICO 202526” on the source page.)*
 
-![Screenshot struttura foglio scuole](assets/struttura_foglio_scuole.png)
+![Structure of the "scuole" sheet](assets/struttura_foglio_scuole.png)
