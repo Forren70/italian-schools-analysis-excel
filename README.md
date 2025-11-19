@@ -42,3 +42,37 @@ The structure of the main sheet is shown below for quick reference:
 *Caption: The first columns of the "scuole" sheet, which uniquely identify each institution and link it to the lookup tables (Comuni and Tipologie).*
 
 ---
+## 🔎 Lookup Sheets
+
+The `School_Analysis.xlsx` file includes three supporting sheets used to normalize and categorize data found in the main "scuole" sheet.
+
+### 2.1 Tipologie (School Types)
+
+This small lookup sheet defines the classification of schools by type (e.g., Primary School, Secondary School, etc.). It helps to easily filter the main data.
+
+| Column Name | Description |
+| :--- | :--- |
+| **TipologiaID** | *Unique numeric identifier for the school type (Primary Key).* |
+| **Tipologia** | *Full description of the school type.* |
+
+### 2.2 Comuni (Municipalities)
+
+This sheet provides geographical data for the municipalities where the schools are located.
+
+| Column Name | Description |
+| :--- | :--- |
+| **ComuneID** | *Unique numeric identifier for the Municipality (Primary Key), referenced by the "scuole" sheet.* |
+| **Comune** | *Official name of the Italian Municipality.* |
+| **ProvinciaID** | *Foreign key linking the Comune to the corresponding Province (Provincia) in the "province" lookup sheet.* |
+
+### 2.3 Province (Provinces)
+
+This sheet is the highest-level geographical lookup, linking municipalities to their respective provinces.
+
+| Column Name | Description |
+| :--- | :--- |
+| **ProvinciaID** | *Unique numeric identifier for the Province (Primary Key), referenced by the "comuni" sheet.* |
+| **Provincia** | *Full name of the Italian Province.* |
+| **Sigla** | *Official two-letter abbreviation/code for the Province.* |
+
+---
