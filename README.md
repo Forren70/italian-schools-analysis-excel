@@ -173,3 +173,62 @@ The disparity in school count is significant (e.g., 15,681 records for "Scuola p
     ![Screenshot 9 Bar Chart Logarithmic Scale](assets/screenshot_barchart_logarithmic.png)
 
 ---
+
+---
+## 🗺️ Geographical Distribution: Choropleth Map
+
+To visualize the total number of schools per province, the data was extracted from the Pivot Table and used to generate a choropleth map of Italy.
+
+### Map Creation Steps
+
+1.  **Data Preparation:** A new sheet named **"Schools distribution map"** was created. Columns containing the **Province** and the **Count of schools per province** were copied from the Pivot Table and pasted using the **"Copy Values"** option into columns D and E. This step was necessary to prevent Excel from automatically altering the data during map generation.
+2.  **Column Renaming:** Columns D and E were renamed to **"Provincia"** and **"Numero di scuole per provincia"** (Number of schools per province), respectively.
+3.  **Map Generation:** Columns D and E were selected, and the map was generated using **Insert > Maps** (Excel automatically detects the geographic names and uses geocoding via Bing Maps to create the choropleth).
+
+### Visualization and Analysis
+
+The map displays the distribution of the total number of schools per province.
+
+* **Color Scale:** The default two-color sequential scale was modified to a **three divergent color scale in red**, ranging from light red (lower number of schools) to dark red (higher number of schools).
+* **Missing Data:** Three provinces in the far North (**Aosta, Trento, and Bolzano**) are displayed in light grey due to missing data for this specific analysis.
+* **Key Observations:**
+    * The provinces with the **highest number of schools** are **Rome** and **Naples**, followed by **Turin** and **Milan**. This trend is generally correlated with the high population density and socio-economic importance of these metropolitan areas.
+    * Surprisingly, **Salerno** and **Cosenza** occupy the fifth and sixth positions, despite not being large metropolitan areas with high population density.
+
+* **Screenshot 10: Schools Distribution Map**
+    ![Screenshot 10 Schools distribution map](assets/screenshot_mappa_scuole_per_provincia_italia.png)
+    *Caption: Choropleth map illustrating the number of schools distributed across Italian provinces.*
+
+---
+
+## 🌎 Regional Analysis Setup
+
+To enable analysis at the regional level, the dataset was further enriched by adding the official Italian region name to the main `scuole` sheet.
+
+### Data Preparation and Region Lookup
+
+1.  **File Duplication:** The file `School_Analysis_VLOOKUP_XLOOKUP.xlsx` was copied and renamed **`School_Analysis_by_region.xlsx`**.
+2.  **External Data Integration:** A lookup file containing official regional data (`province-italiane.xls` from the provided source) was downloaded. Columns **Sigla**, **Provincia**, and **Regione** were copied from this external file and pasted into columns E, F, and G of the existing **`Province`** sheet in the new file.
+3.  **New Column Creation:** A new column, **"Regione"**, was created in the **`scuole`** sheet.
+
+### Lookup Formula for Region
+
+The **"Regione"** column was populated using the Italian Excel function `CERCA.X` (XLOOKUP) based on the **province abbreviation (`Sigla`)**:
+
+$$
+\text{Column } \mathbf{"Regione"} = \text{CERCA.X}(\text{I2}; \text{Province!E:E}; \text{Province!G:G})
+$$
+
+This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet and looks up the corresponding **Regione** from the updated `Province` sheet.
+
+### Visual Confirmation
+
+* **Screenshot 11: Province Sheet Update**
+    ![Screenshot 11 showing Province sheet update](assets/screenshot_province_sheet_update.png)
+    *Caption: The updated 'Province' sheet containing the new 'Regione' column (Column G).*
+
+* **Screenshot 12: Scuole Sheet with Regione Column**
+    ![Screenshot 12 showing Scuole sheet with Regione](assets/screenshot_scuole_sheet_regione.png)
+    *Caption: The 'scuole' sheet displaying the newly added 'Regione' column populated via XLOOKUP.*
+
+---
