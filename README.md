@@ -37,7 +37,7 @@ The "scuole" sheet holds the core institutional data. Below is a detailed descri
 
 The structure of the main sheet is shown below for quick reference:
 
-![Structure of the "scuole" sheet](assets/struttura_foglio_scuole.png)
+![Structure of the "scuole" sheet](assets/structure_sheet_scuole.png)
 
 *Caption: The first columns of the "scuole" sheet, which uniquely identify each institution and link it to the lookup tables (Comuni and Tipologie).*
 
