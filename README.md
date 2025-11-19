@@ -76,3 +76,48 @@ This sheet is the highest-level geographical lookup, linking municipalities to t
 | **Sigla** | *Official two-letter abbreviation/code for the Province.* |
 
 ---
+## 📝 Data Enrichment and Analysis Setup
+
+After normalizing the data model, the core "scuole" sheet was enriched by adding descriptive columns using Excel lookup functions (VLOOKUP and XLOOKUP) applied across the four sheets.
+
+A new file, `School_Analysis_VLOOKUP_XLOOKUP.xlsx`, was created for this step. The following descriptive columns were added and populated:
+
+| Target Column | Description | Lookup Function |
+| :--- | :--- | :--- |
+| **Comune** | Municipality name | `VLOOKUP` |
+| **Tipologia di scuola** | Type of school | `VLOOKUP` |
+| **Provincia** | Province name | `XLOOKUP` |
+| **Sigla Provincia** | Province abbreviation | `XLOOKUP` |
+
+### Lookup Formulas Used:
+
+The formulas used to link the descriptive data back to the main sheet were:
+
+| Target Column | Formula Logic (English) | Keys Used |
+| :--- | :--- | :--- |
+| **Comune** | `=VLOOKUP(D2, comuni!A:B, 2, FALSE)` | `ComuneID` against `comuni!ComuneID` |
+| **Tipologia di scuola** | `=VLOOKUP(F2, tipologie!A:B, 2, FALSE)` | `TipologiaID` against `tipologie!Tipologia` |
+| **Provincia** | `=XLOOKUP(D2, comuni!A:A, comuni!D:D)` | `ComuneID` against `comuni!ProvinciaID` |
+| **Sigla Provincia** | `=XLOOKUP(H2, province!B:B, province!C:C)` | `Provincia` name against `province!Sigla` |
+
+
+
+### 🖼️ File Visuals
+
+The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOKUP_XLOOKUP.xlsx` illustrate the column structure and the application of the lookup formulas:
+
+* **View 1: Initial Enrichment**
+    ![Screenshot 1 showing initial added columns](assets/screenshot_scuole.png)
+    *Caption: The main sheet structure after adding the first descriptive columns.*
+
+* **View 2: Tipologia Lookup**
+    ![Screenshot 2 showing Tipologia di scuola lookup](assets/screenshot_tipologie.png)
+    *Caption: VLOOKUP is used to populate the 'Tipologia di scuola' column using the 'tipologie' sheet.*
+
+* **View 3: Comune/ProvinciaID Lookup**
+    ![Screenshot 3 showing Comune lookup](assets/screenshot_comuni.png)
+    *Caption: VLOOKUP and XLOOKUP operations used to retrieve Municipality details.*
+
+* **View 4: Sigla Provincia Lookup**
+    ![Screenshot 4 showing final Province details lookup](assets/screenshot_province.png)
+    *Caption: XLOOKUP is used to finalize geographical details, retrieving the 'Sigla Provincia'.*
