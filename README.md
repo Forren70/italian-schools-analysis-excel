@@ -232,3 +232,72 @@ This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet 
     *Caption: The 'scuole' sheet displaying the newly added 'Regione' column populated via XLOOKUP.*
 
 ---
+### Pivot Table Update: Regional Distribution
+
+The previous Pivot Table was deleted and replaced with a new structure to focus the analysis on the **Regional** distribution of schools, utilizing the newly added 'Regione' column.
+
+### New Pivot Table Structure
+
+* **Rows:** "Regione"
+* **Values:** Count of "Tipologia di Scuola"
+
+This revised structure allows for a high-level view of the number of educational institutions broken down by the 20 Italian regions. The total count remains **51,091 records**.
+
+### Regional Analysis Visuals
+
+* **Screenshot 13: Regional Structure Overview**
+    ![Screenshot 13 showing Pivot Table by Region structure](assets/screenshot_pivottable_region_structure.png)
+    *Caption: The structure of the updated Pivot Table Analysis, showing 'Regione' in the first column, grouped by school type, with a total count of 51,091 records.*
+
+* **Screenshot 14: Expanded View (Campania Region)**
+    ![Screenshot 14 showing Campania region pivot table](assets/screenshot_campania_region_expanded.png)
+    *Caption: Detailed view of the 'Campania' region, showing a total of 5,717 schools grouped by their respective school type (e.g., 71 'Centro territoriale', 3 'Convitto annesso', 6 'Convitto Nazionale', etc.).*
+
+---
+
+### Visualizing Regional Distribution
+
+The visual analysis was shifted to the regional level using the updated Pivot Table data.
+
+#### Chart Creation Steps
+
+1.  **Data Preparation:** Existing tables and graphs in the **"Bar Charts Tipologia Scuola"** sheet were deleted. The new Pivot Table data (grouped by Region) was copied and pasted into this sheet.
+2.  **Chart Generation:** A new bar chart, titled **"Numero di scuole per Regione"** (Number of schools per Region), was created based on this data.
+
+#### Key Findings and Observations
+
+The analysis reveals the following distribution:
+
+* **Highest Concentration:** The highest numbers of schools are found in **Lombardia, Campania, Sicilia, and Lazio**.
+* **Lowest Concentration:** The lowest numbers are found in **Friuli Venezia Giulia, Umbria, Basilicata, and Molise**.
+
+The distribution generally aligns with the population size and density of the respective regions (reference: [https://www.tuttitalia.it/regioni/densita/](https://www.tuttitalia.it/regioni/densita/)). However, the relationship is not always linear; for example, **Calabria** shows a relatively high number of schools compared to its population density. This suggests a potential area for further demographic and socio-economic investigation.
+
+* **Screenshot 15: Regional Distribution Bar Chart**
+    ![Screenshot 15 bar chart Numero di scuole per Regione](assets/screenshot_barchart_regione.png)
+
+---
+
+---
+## 🗺️ Regional Distribution Map
+
+The final visualization focuses on the high-level geographical distribution of schools across the Italian regions.
+
+### Map Creation Steps
+
+1.  **Data Preparation:** The **Regioni** and **Numero di scuole** data from the updated Pivot Table was copied into the "Schools distribution map" sheet.
+2.  **Map Generation:** The map **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions) was created following the same procedure used for the provincial map (Insert > Maps).
+
+### Visualization Parameters
+
+* **Color Scale:** The visualization uses a **3-Color Scale (divergent) in green** for clear distinction.
+* **Scale Values:** The parameters were manually set to:
+    * **Minimum:** 400
+    * **Midpoint:** 2,500
+    * **Maximum:** 5,000
+
+* **Screenshot 16: Regional Schools Distribution Map**
+    ![Screenshot 16 mappa scuole per regione italia](assets/screenshot_mappa_scuole_per_regione_italia.png)
+    *Caption: Choropleth map illustrating the final distribution of state schools across the Italian regions, using a green 3-color scale.*
+
+---
