@@ -1,6 +1,6 @@
 # 🇮🇹 Italian Schools Analysis Project (2025)
 
-
+<br>
 ---
 
 ## 🎯 1 Project Objectives
@@ -13,7 +13,7 @@ This analysis project aims to provide a clear, structured framework for explorin
 * **Foundation for Further Study:** To serve as a validated and reliable starting point for further socio-economic or demographic studies.
 
 
-
+<br>
 ---
 
 ## 🖼️ 2 Project Overview
