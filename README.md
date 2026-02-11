@@ -26,6 +26,7 @@ This analysis project aims to provide a clear, structured framework for explorin
 This image represents the final result of the analysis, specifically the Choropleth Map showing the **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions):
 
 ![Project Overview Screenshot](assets/project_cover.png)
+
 *Figure 1: Choropleth map showing the distribution of state schools in Italian regions.*
 
 <br>
@@ -156,6 +157,7 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 * **View 1 - Initial Enrichment:**
 
 ![Screenshot 1 showing initial added columns](assets/screenshot_scuole.png)
+
 *Figure 3: Initial Enrichment. The main sheet structure after adding the first descriptive columns.*
 
 <br>
@@ -163,6 +165,7 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 * **View 2 -  Tipologia Lookup:**
 
 ![Screenshot 2 showing Tipologia di scuola lookup](assets/screenshot_tipologie.png)
+
 *Figure 4: Tipologia Lookup. VLOOKUP is used to populate the 'Tipologia di scuola' column using the 'tipologie' sheet.*
 
 <br>
