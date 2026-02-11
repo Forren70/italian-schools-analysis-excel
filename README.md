@@ -151,27 +151,28 @@ The formulas used to link the descriptive data back to the main sheet were:
 
 The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOKUP_XLOOKUP.xlsx` illustrate the column structure and the application of the lookup formulas:
 
+<br>
 
 * **View 1 - Initial Enrichment:**
 
 ![Screenshot 1 showing initial added columns](assets/screenshot_scuole.png)
 *Figure 3: Initial Enrichment. The main sheet structure after adding the first descriptive columns.*
 
-
+<br>
 
 * **View 2 -  Tipologia Lookup:**
 
 ![Screenshot 2 showing Tipologia di scuola lookup](assets/screenshot_tipologie.png)
 *Figure 4: Tipologia Lookup. VLOOKUP is used to populate the 'Tipologia di scuola' column using the 'tipologie' sheet.*
 
-
+<br>
 
 * **View 3 - Comune/ProvinciaID Lookup:**
-  
+
 ![Screenshot 3 showing Comune lookup](assets/screenshot_comuni.png)
 *Figure 5: Comune Lookup. VLOOKUP and XLOOKUP operations used to retrieve Municipality details.*
 
-
+<br>
 
 * **View 4 - Sigla Provincia Lookup:**
 
