@@ -242,6 +242,7 @@ To better visualize the quantitative differences between school types, data from
 
 A bar chart, titled **"Conteggio tipologia scuola per Provincia"** (Count of school types per Province), was created and sorted in descending order based on the count.
 
+<br>
 
 ### 7.5 Key Findings & Visualization Adjustments:
 
