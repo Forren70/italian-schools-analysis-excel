@@ -2,7 +2,7 @@
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 1 Project Objectives
 
 This analysis project aims to provide a clear, structured framework for exploring and interpreting the raw data on Italian public schools. The primary goals are:
 
@@ -12,7 +12,8 @@ This analysis project aims to provide a clear, structured framework for explorin
 * **Foundation for Further Study:** To serve as a validated and reliable starting point for further socio-economic or demographic studies.
 
 ---
-### 🖼️ Project Overview
+
+## 🖼️ 2 Project Overview
 
 This image represents the final result of the analysis, specifically the Choropleth Map showing the **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions):
 
@@ -21,7 +22,7 @@ This image represents the final result of the analysis, specifically the Choropl
 
 ---
 
-## 📊 Data Source Overview
+## 📊 3 Data Source Overview
 
 The analysis is based on the following initial file:
 
@@ -29,7 +30,7 @@ The analysis is based on the following initial file:
 
 This file contains information for **51,091 public schools in Italy** for the academic year 2025/2026. The Excel file is structured across **4 sheets**: `scuole`, `tipologie`, `comuni`, and `province`.
 
-### Origin and Adaptation
+### 3.1 Origin and Adaptation
 The data was adapted and simplified from the original CSV file:
 `SCUANAGRAFESTAT20252620250901.csv`
 
@@ -40,7 +41,7 @@ The source data is openly published by the Ministry of Education (MIUR).
 
 ---
 
-## 🏛️ Main Data Sheet: "scuole"
+## 🏛️ 4 Main Data Sheet: "scuole"
 
 The "scuole" sheet holds the core institutional data. Below is a detailed description of the main columns included in this file:
 
@@ -52,7 +53,7 @@ The "scuole" sheet holds the core institutional data. Below is a detailed descri
 | **ComuneID** | *Foreign key linking the school to the corresponding Comune (municipality) in the "comuni" lookup sheet.* |
 | **TipologiaID** | *Foreign key linking the school to the corresponding school type (Tipo di scuola) in the "tipologie" lookup sheet.* |
 
-### Data Structure Visual
+### 4.1 Data Structure Visual
 
 The structure of the main sheet is shown below for quick reference:
 
@@ -60,13 +61,13 @@ The structure of the main sheet is shown below for quick reference:
 
 *Figure 2: Structure of the "scuole" sheet, showing columns linking each school to Comuni and Tipologie.*
 
-
 ---
-## 🔎 Lookup Sheets
+
+## 🔎 5 Lookup Sheets
 
 The `School_Analysis.xlsx` file includes three supporting sheets used to normalize and categorize data found in the main "scuole" sheet.
 
-### 2.1 Tipologie (School Types)
+### 5.1 Tipologie (School Types)
 
 This small lookup sheet defines the classification of schools by type (e.g., Primary School, Secondary School, etc.). It helps to easily filter the main data.
 
@@ -75,7 +76,7 @@ This small lookup sheet defines the classification of schools by type (e.g., Pri
 | **TipologiaID** | *Unique numeric identifier for the school type (Primary Key).* |
 | **Tipologia** | *Full description of the school type.* |
 
-### 2.2 Comuni (Municipalities)
+### 5.2 Comuni (Municipalities)
 
 This sheet provides geographical data for the municipalities where the schools are located.
 
@@ -85,7 +86,7 @@ This sheet provides geographical data for the municipalities where the schools a
 | **Comune** | *Official name of the Italian Municipality.* |
 | **ProvinciaID** | *Foreign key linking the Comune to the corresponding Province (Provincia) in the "province" lookup sheet.* |
 
-### 2.3 Province (Provinces)
+### 5.3 Province (Provinces)
 
 This sheet is the highest-level geographical lookup, linking municipalities to their respective provinces.
 
@@ -96,7 +97,8 @@ This sheet is the highest-level geographical lookup, linking municipalities to t
 | **Sigla** | *Official two-letter abbreviation/code for the Province.* |
 
 ---
-## 📝 Data Enrichment and Analysis Setup
+
+## 📝 6 Data Enrichment and Analysis Setup
 
 After normalizing the data model, the core "scuole" sheet was enriched by adding descriptive columns using Excel lookup functions (VLOOKUP and XLOOKUP) applied across the four sheets.
 
@@ -109,7 +111,7 @@ A new file, `School_Analysis_VLOOKUP_XLOOKUP.xlsx`, was created for this step. T
 | **Provincia** | Province name | `XLOOKUP` |
 | **Sigla Provincia** | Province abbreviation | `XLOOKUP` |
 
-### Lookup Formulas Used:
+### 6.1 Lookup Formulas Used:
 
 The formulas used to link the descriptive data back to the main sheet were:
 
@@ -121,7 +123,7 @@ The formulas used to link the descriptive data back to the main sheet were:
 | **Sigla Provincia** | `=XLOOKUP(H2, province!B:B, province!C:C)` | `Provincia` name against `province!Sigla` |
 
 
-### 🖼️ File Visuals
+### 🖼️ 6.2 File Visuals
 
 The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOKUP_XLOOKUP.xlsx` illustrate the column structure and the application of the lookup formulas:
 
@@ -148,13 +150,13 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 ![Screenshot 4 showing final Province details lookup](assets/screenshot_province.png)
 *Figure 6: Province Lookup. XLOOKUP is used to finalize geographical details, retrieving the 'Sigla Provincia'.*
 
-
 ---
-## 📈 Pivot Table Analysis
+
+## 📈 7 Pivot Table Analysis
 
 Following the data enrichment, a Pivot Table was created to quickly analyze the distribution of school types across the different provinces.
 
-### Pivot Table Structure
+### 7.1 Pivot Table Structure
 
 A new sheet, **"PivotTable"**, was created with the following structure:
 
@@ -163,7 +165,7 @@ A new sheet, **"PivotTable"**, was created with the following structure:
 
 This configuration allows for drilling down into the specific count of each school type per province.
 
-### Visual Analysis
+### 7.2 Visual Analysis
 
 ![Screenshot 6 showing Pivot Table Structure](assets/screenshot_pivottable_structure.png)
 *Figure 7: Structure Overview. The structure of the Pivot Table Analysis, showing "Tipologia di scuola" (type of school) in the first column, grouped by type.*
@@ -172,7 +174,7 @@ This configuration allows for drilling down into the specific count of each scho
 ![Screenshot 7 showing Liceo Scientifico expansion](assets/screenshot_liceo_scientifico_expanded.png)
 *Figure 8: Detailed view of the 'Liceo Scientifico' category, showing a total of 1,029 schools distributed alphabetically across the various provinces (e.g., 8 in Agrigento, 7 in Alessandria, 10 in Ancona).*
 
-### Analysis Refinement: Granularity by Municipality
+### 7.3 Analysis Refinement: Granularity by Municipality
 
 By further modifying the Pivot Table structure and adding the **"Comune"** field to the **Rows** area, the analysis achieves a finer level of detail. This action allows the count of each type of school to be displayed not just by Province, but broken down by individual Municipality.
 
@@ -181,13 +183,13 @@ By further modifying the Pivot Table structure and adding the **"Comune"** field
 *Figure 9: The structure of the Pivot Table after adding the 'Comune' field to the Rows area for deeper geographic granularity.*
 
 ---
-### Visualizing Distribution: Bar Charts Analysis
+### 7.4 Visualizing Distribution: Bar Charts Analysis
 
 To better visualize the quantitative differences between school types, data from the Pivot Table was copied and pasted into a new sheet, **"Bar Charts Tipologia Scuola"**.
 
 A bar chart, titled **"Conteggio tipologia scuola per Provincia"** (Count of school types per Province), was created and sorted in descending order based on the count.
 
-#### Key Findings & Visualization Adjustments:
+### 7.5 Key Findings & Visualization Adjustments:
 
 The analysis immediately highlights the dominance of categories like **Scuola primaria** (Primary school), **Infanzia**, **Primo grado**, and **Istituto comprensivo**.
 
@@ -199,17 +201,18 @@ The disparity in school count is significant (e.g., 15,681 records for "Scuola p
     ![Screenshot 9 Bar Chart Logarithmic Scale](assets/screenshot_barchart_logarithmic.png)
 
 ---
-## 🗺️ Geographical Distribution: Choropleth Map
+
+## 🗺️ 8 Geographical Distribution: Choropleth Map
 
 To visualize the total number of schools per province, the data was extracted from the Pivot Table and used to generate a choropleth map of Italy.
 
-### Map Creation Steps
+### 8.1 Map Creation Steps
 
 1.  **Data Preparation:** A new sheet named **"Schools distribution map"** was created. Columns containing the **Province** and the **Count of schools per province** were copied from the Pivot Table and pasted using the **"Copy Values"** option into columns D and E. This step was necessary to prevent Excel from automatically altering the data during map generation.
 2.  **Column Renaming:** Columns D and E were renamed to **"Provincia"** and **"Numero di scuole per provincia"** (Number of schools per province), respectively.
 3.  **Map Generation:** Columns D and E were selected, and the map was generated using **Insert > Maps** (Excel automatically detects the geographic names and uses geocoding via Bing Maps to create the choropleth).
 
-### Visualization and Analysis
+### 8.2 Visualization and Analysis
 
 The map displays the distribution of the total number of schools per province.
 
@@ -222,20 +225,19 @@ The map displays the distribution of the total number of schools per province.
 ![Screenshot 10 Schools distribution map](assets/screenshot_mappa_scuole_per_provincia_italia.png)
 *Figure 10: Choropleth map illustrating the number of schools distributed across Italian provinces.*
 
-
 ---
 
-## 🌎 Regional Analysis Setup
+## 🌎 9 Regional Analysis Setup
 
 To enable analysis at the regional level, the dataset was further enriched by adding the official Italian region name to the main `scuole` sheet.
 
-### Data Preparation and Region Lookup
+### 9.1 Data Preparation and Region Lookup
 
 1.  **File Duplication:** The file `School_Analysis_VLOOKUP_XLOOKUP.xlsx` was copied and renamed **`School_Analysis_by_region.xlsx`**.
 2.  **External Data Integration:** A lookup file containing official regional data (`province-italiane.xls` from the provided source) was downloaded. Columns **Sigla**, **Provincia**, and **Regione** were copied from this external file and pasted into columns E, F, and G of the existing **`Province`** sheet in the new file.
 3.  **New Column Creation:** A new column, **"Regione"**, was created in the **`scuole`** sheet.
 
-### Lookup Formula for Region
+### 9.2 Lookup Formula for Region
 
 The **"Regione"** column was populated using the Italian Excel function `CERCA.X` (XLOOKUP) based on the **province abbreviation (`Sigla`)**:
 
@@ -245,7 +247,7 @@ $$
 
 This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet and looks up the corresponding **Regione** from the updated `Province` sheet.
 
-### Visual Confirmation
+### 9.3 Visual Confirmation
 
 
 ![Screenshot 11 showing Province sheet update](assets/screenshot_province_sheet_update.png)
@@ -256,19 +258,18 @@ This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet 
 *Figure 12: The 'scuole' sheet displaying the newly added 'Regione' column populated via XLOOKUP.*
 
 ---
-### Pivot Table Update: Regional Distribution
+### 9.4 Pivot Table Update: Regional Distribution
 
 The previous Pivot Table was deleted and replaced with a new structure to focus the analysis on the **Regional** distribution of schools, utilizing the newly added 'Regione' column.
 
-### New Pivot Table Structure
+### 9.5 New Pivot Table Structure
 
 * **Rows:** "Regione"
 * **Values:** Count of "Tipologia di Scuola"
 
 This revised structure allows for a high-level view of the number of educational institutions broken down by the 20 Italian regions. The total count remains **51,091 records**.
 
-### Regional Analysis Visuals
-
+### 9.6 Regional Analysis Visuals
 
 ![Screenshot 13 showing Pivot Table by Region structure](assets/screenshot_pivottable_region_structure.png)
 *Figure 13: The structure of the updated Pivot Table Analysis, showing 'Regione' in the first column, grouped by school type, with a total count of 51,091 records.*
@@ -279,16 +280,16 @@ This revised structure allows for a high-level view of the number of educational
 
 ---
 
-### Visualizing Regional Distribution
+## 10 Visualizing Regional Distribution
 
 The visual analysis was shifted to the regional level using the updated Pivot Table data.
 
-#### Chart Creation Steps
+### 10.1 Chart Creation Steps
 
 1.  **Data Preparation:** Existing tables and graphs in the **"Bar Charts Tipologia Scuola"** sheet were deleted. The new Pivot Table data (grouped by Region) was copied and pasted into this sheet.
 2.  **Chart Generation:** A new bar chart, titled **"Numero di scuole per Regione"** (Number of schools per Region), was created based on this data.
 
-#### Key Findings and Observations
+### 10.2 Key Findings and Observations
 
 The analysis reveals the following distribution:
 
@@ -302,16 +303,17 @@ The distribution generally aligns with the population size and density of the re
   *Figure 15: Bar chart showing the number of schools per Italian region.*
 
 ---
-## 🗺️ Regional Distribution Map
+
+## 🗺️ 11 Regional Distribution Map
 
 The final visualization focuses on the high-level geographical distribution of schools across the Italian regions.
 
-### Map Creation Steps
+### 11.1 Map Creation Steps
 
 1.  **Data Preparation:** The **Regioni** and **Numero di scuole** data from the updated Pivot Table was copied into the "Schools distribution map" sheet.
 2.  **Map Generation:** The map **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions) was created following the same procedure used for the provincial map (Insert > Maps).
 
-### Visualization Parameters
+### 11.2 Visualization Parameters
 
 * **Color Scale:** The visualization uses a **3-Color Scale (divergent) in green** for clear distinction.
 * **Scale Values:** The parameters were manually set to:
@@ -325,18 +327,18 @@ The final visualization focuses on the high-level geographical distribution of s
 
 ---
 
-## 🏆 Conclusion and Usage
+## 🏆 13 Conclusion and Usage
 
 This project successfully demonstrates the process of transforming complex, raw data into a relational model within Excel for robust analysis. The structured data model (using the **scuole**, **tipologie**, **comuni**, and **province** sheets) allows for efficient creation of pivot tables, bar charts, and geographical visualizations to explore patterns in the Italian educational landscape.
 
-### Next Steps for Analysis
+### 13.1 Next Steps for Analysis
 
 The files (`School_Analysis_VLOOKUP_XLOOKUP.xlsx` and `School_Analysis_by_region.xlsx`) are ready for any user to perform further queries, such as:
 
 * **Drill-down:** Investigate the specific number of schools for a particular municipality (using the 'Comune' field in the Pivot Table).
 * **Ratio Analysis:** Calculate the ratio of schools per capita in different regions to normalize the data and refine geographical observations (e.g., comparing Calabria's school count to its population density).
 
-### File Usage
+### 13.2 File Usage
 
 To explore the analysis and replicate the steps documented above:
 
