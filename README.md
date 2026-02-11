@@ -5,6 +5,7 @@
 ---
 
 <br>
+
 ## 🎯 1 Project Objectives
 
 This analysis project aims to provide a clear, structured framework for exploring and interpreting the raw data on Italian public schools. The primary goals are:
@@ -17,7 +18,9 @@ This analysis project aims to provide a clear, structured framework for explorin
 <br>
 
 ---
+
 <br>
+
 ## 🖼️ 2 Project Overview
 
 This image represents the final result of the analysis, specifically the Choropleth Map showing the **"Distribuzione scuole statali nelle regioni italiane"** (Distribution of state schools in Italian regions):
