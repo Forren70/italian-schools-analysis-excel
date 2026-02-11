@@ -4,7 +4,6 @@
 
 ---
 <br>
-
 ## 🎯 1 Project Objectives
 
 This analysis project aims to provide a clear, structured framework for exploring and interpreting the raw data on Italian public schools. The primary goals are:
@@ -14,8 +13,8 @@ This analysis project aims to provide a clear, structured framework for explorin
 * **School Type Profiling:** To categorize and compare the number of institutions based on their **Tipologia** (school type) to profile the educational system's structure.
 * **Foundation for Further Study:** To serve as a validated and reliable starting point for further socio-economic or demographic studies.
 
-
 <br>
+
 ---
 <br>
 ## 🖼️ 2 Project Overview
@@ -25,10 +24,10 @@ This image represents the final result of the analysis, specifically the Choropl
 ![Project Overview Screenshot](assets/project_cover.png)
 *Figure 1: Choropleth map showing the distribution of state schools in Italian regions.*
 
-
+<br>
 
 ---
-
+<br>
 ## 📊 3 Data Source Overview
 
 The analysis is based on the following initial file:
