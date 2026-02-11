@@ -318,7 +318,7 @@ To enable analysis at the regional level, the dataset was further enriched by ad
 
 The **"Regione"** column was populated using the Italian Excel function `CERCA.X` (XLOOKUP) based on the **province abbreviation (`Sigla`)**:
 
-$$\text{Column Regione} = \text{CERCA.X}(I2; \text{Province!E:E}; \text{Province!G:G})$$
+$$\text{Column Regione = CERCA.X(I2; Province!E:E; Province!G:G)}$$
 
 This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet and looks up the corresponding **Regione** from the updated `Province` sheet.
 
