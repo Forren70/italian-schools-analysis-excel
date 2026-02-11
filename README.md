@@ -339,11 +339,13 @@ This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet 
 
 *Figure 12: The 'scuole' sheet displaying the newly added 'Regione' column populated via XLOOKUP.*
 
+<br>
 
 ### 9.4 Pivot Table Update: Regional Distribution
 
 The previous Pivot Table was deleted and replaced with a new structure to focus the analysis on the **Regional** distribution of schools, utilizing the newly added 'Regione' column.
 
+<br>
 <br>
 
 ### 9.5 New Pivot Table Structure
@@ -354,6 +356,7 @@ The previous Pivot Table was deleted and replaced with a new structure to focus 
 This revised structure allows for a high-level view of the number of educational institutions broken down by the 20 Italian regions. The total count remains **51,091 records**.
 
 <br>
+<br>
 
 ### 9.6 Regional Analysis Visuals
 
@@ -361,6 +364,7 @@ This revised structure allows for a high-level view of the number of educational
 
 *Figure 13: The structure of the updated Pivot Table Analysis, showing 'Regione' in the first column, grouped by school type, with a total count of 51,091 records.*
 
+<br>
 <br>
 
 ![Screenshot 14 showing Campania region pivot table](assets/screenshot_campania_region_expanded.png)
