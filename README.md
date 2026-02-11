@@ -31,7 +31,9 @@ This image represents the final result of the analysis, specifically the Choropl
 <br>
 
 ---
+
 <br>
+
 ## 📊 3 Data Source Overview
 
 The analysis is based on the following initial file:
@@ -49,9 +51,11 @@ The source data is openly published by the Ministry of Education (MIUR).
 **Source Link:** [Dati Istruzione (MIUR) - Distribuzione 2025/2026](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Scuole)
 *(To download the original CSV file, click on “Distribuzione per ANNOSCOLASTICO 202526” on the source page.)*
 
-
+<br>
 
 ---
+
+<br>
 
 ## 🏛️ 4 Main Data Sheet: "scuole"
 
@@ -73,9 +77,11 @@ The structure of the main sheet is shown below for quick reference:
 
 *Figure 2: Structure of the "scuole" sheet, showing columns linking each school to Comuni and Tipologie.*
 
-
+<br>
 
 ---
+
+<br>
 
 ## 🔎 5 Lookup Sheets
 
@@ -110,9 +116,11 @@ This sheet is the highest-level geographical lookup, linking municipalities to t
 | **Provincia** | *Full name of the Italian Province.* |
 | **Sigla** | *Official two-letter abbreviation/code for the Province.* |
 
-
+<br>
 
 ---
+
+<br>
 
 ## 📝 6 Data Enrichment and Analysis Setup
 
@@ -170,9 +178,12 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 ![Screenshot 4 showing final Province details lookup](assets/screenshot_province.png)
 *Figure 6: Province Lookup. XLOOKUP is used to finalize geographical details, retrieving the 'Sigla Provincia'.*
 
-
+<br>
 
 ---
+
+<br>
+
 
 ## 📈 7 Pivot Table Analysis
 
@@ -226,9 +237,11 @@ The disparity in school count is significant (e.g., 15,681 records for "Scuola p
 * **Logarithmic Scale:** To better display the differences among the less represented school types, the Y-axis was formatted to use a logarithmic scale (Right click axis -> Format Axis -> Logarithmic scale selected).
     ![Screenshot 9 Bar Chart Logarithmic Scale](assets/screenshot_barchart_logarithmic.png)
 
-
+<br>
 
 ---
+
+<br>
 
 ## 🗺️ 8 Geographical Distribution: Choropleth Map
 
@@ -255,9 +268,11 @@ The map displays the distribution of the total number of schools per province.
 ![Screenshot 10 Schools distribution map](assets/screenshot_mappa_scuole_per_provincia_italia.png)
 *Figure 10: Choropleth map illustrating the number of schools distributed across Italian provinces.*
 
-
+<br>
 
 ---
+
+<br>
 
 ## 🌎 9 Regional Analysis Setup
 
@@ -315,9 +330,11 @@ This revised structure allows for a high-level view of the number of educational
 ![Screenshot 14 showing Campania region pivot table](assets/screenshot_campania_region_expanded.png)
 *Figure 14: Detailed view of the 'Campania' region, showing a total of 5,717 schools grouped by their respective school type (e.g., 71 'Centro territoriale', 3 'Convitto annesso', 6 'Convitto Nazionale', etc.).*
 
-
+<br>
 
 ---
+
+<br>
 
 ## 10 Visualizing Regional Distribution
 
@@ -343,9 +360,11 @@ The distribution generally aligns with the population size and density of the re
 ![Screenshot 15 bar chart Numero di scuole per Regione](assets/screenshot_barchart_regione.png)
   *Figure 15: Bar chart showing the number of schools per Italian region.*
 
-
+<br>
 
 ---
+
+<br>
 
 ## 🗺️ 11 Regional Distribution Map
 
@@ -370,9 +389,12 @@ The final visualization focuses on the high-level geographical distribution of s
 ![Screenshot 16 mappa scuole per regione italia](assets/screenshot_mappa_scuole_per_regione_italia.png)
 *Figure 16: Choropleth map illustrating the final distribution of state schools across the Italian regions, using a green 3-color scale.*
 
-
+<br>
 
 ---
+
+<br>
+
 
 ## 🏆 12 Conclusion and Usage
 
