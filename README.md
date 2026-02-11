@@ -1,8 +1,11 @@
 # 🇮🇹 Italian Schools Analysis Project (2025)
 
 <br>
+
 ---
+
 <br>
+
 ## 🎯 1 Project Objectives
 
 This analysis project aims to provide a clear, structured framework for exploring and interpreting the raw data on Italian public schools. The primary goals are:
