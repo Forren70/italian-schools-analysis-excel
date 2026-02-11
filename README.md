@@ -301,7 +301,7 @@ The analysis reveals the following distribution:
 The distribution generally aligns with the population size and density of the respective regions (reference: [https://www.tuttitalia.it/regioni/densita/](https://www.tuttitalia.it/regioni/densita/)). However, the relationship is not always linear; for example, **Calabria** shows a relatively high number of schools compared to its population density. This suggests a potential area for further demographic and socio-economic investigation.
 
 
-    ![Screenshot 15 bar chart Numero di scuole per Regione](assets/screenshot_barchart_regione.png)
+![Screenshot 15 bar chart Numero di scuole per Regione](assets/screenshot_barchart_regione.png)
   *Figure 15: Bar chart showing the number of schools per Italian region.*
 
 ---
