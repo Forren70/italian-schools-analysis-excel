@@ -217,6 +217,7 @@ This configuration allows for drilling down into the specific count of each scho
 
 *Figure 7: Structure Overview. The structure of the Pivot Table Analysis, showing "Tipologia di scuola" (type of school) in the first column, grouped by type.*
 
+<br>
 
 ![Screenshot 7 showing Liceo Scientifico expansion](assets/screenshot_liceo_scientifico_expanded.png)
 
