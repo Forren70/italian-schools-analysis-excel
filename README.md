@@ -334,7 +334,6 @@ This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet 
 
 *Figure 12: The 'scuole' sheet displaying the newly added 'Regione' column populated via XLOOKUP.*
 
-<br>
 
 ### 9.4 Pivot Table Update: Regional Distribution
 
