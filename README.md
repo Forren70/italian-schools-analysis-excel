@@ -304,7 +304,6 @@ The map displays the distribution of the total number of schools per province.
 
 To enable analysis at the regional level, the dataset was further enriched by adding the official Italian region name to the main `scuole` sheet.
 
-<br>
 
 ### 9.1 Data Preparation and Region Lookup
 
@@ -312,7 +311,6 @@ To enable analysis at the regional level, the dataset was further enriched by ad
 2.  **External Data Integration:** A lookup file containing official regional data (`province-italiane.xls` from the provided source) was downloaded. Columns **Sigla**, **Provincia**, and **Regione** were copied from this external file and pasted into columns E, F, and G of the existing **`Province`** sheet in the new file.
 3.  **New Column Creation:** A new column, **"Regione"**, was created in the **`scuole`** sheet.
 
-<br>
 
 ### 9.2 Lookup Formula for Region
 
@@ -322,7 +320,6 @@ The **"Regione"** column was populated using the Italian Excel function `CERCA.X
 
 This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet and looks up the corresponding **Regione** from the updated `Province` sheet.
 
-<br>
 
 ### 9.3 Visual Confirmation
 
@@ -343,8 +340,7 @@ This formula uses the **Province Abbreviation (Sigla)** from the `scuole` sheet 
 
 The previous Pivot Table was deleted and replaced with a new structure to focus the analysis on the **Regional** distribution of schools, utilizing the newly added 'Regione' column.
 
-<br>
-<br>
+
 
 ### 9.5 New Pivot Table Structure
 
@@ -353,8 +349,7 @@ The previous Pivot Table was deleted and replaced with a new structure to focus 
 
 This revised structure allows for a high-level view of the number of educational institutions broken down by the 20 Italian regions. The total count remains **51,091 records**.
 
-<br>
-<br>
+
 
 ### 9.6 Regional Analysis Visuals
 
