@@ -198,7 +198,7 @@ The following views of the enriched **`scuole`** sheet in `School_Analysis_VLOOK
 
 Following the data enrichment, a Pivot Table was created to quickly analyze the distribution of school types across the different provinces.
 
-<br>
+
 
 ### 7.1 Pivot Table Structure
 
@@ -209,7 +209,7 @@ A new sheet, **"PivotTable"**, was created with the following structure:
 
 This configuration allows for drilling down into the specific count of each school type per province.
 
-<br>
+
 
 ### 7.2 Visual Analysis
 
@@ -223,7 +223,7 @@ This configuration allows for drilling down into the specific count of each scho
 
 *Figure 8: Detailed view of the 'Liceo Scientifico' category, showing a total of 1,029 schools distributed alphabetically across the various provinces (e.g., 8 in Agrigento, 7 in Alessandria, 10 in Ancona).*
 
-<br>
+
 
 ### 7.3 Analysis Refinement: Granularity by Municipality
 
@@ -234,7 +234,7 @@ By further modifying the Pivot Table structure and adding the **"Comune"** field
 
 *Figure 9: The structure of the Pivot Table after adding the 'Comune' field to the Rows area for deeper geographic granularity.*
 
-<br>
+
 
 ### 7.4 Visualizing Distribution: Bar Charts Analysis
 
@@ -242,7 +242,7 @@ To better visualize the quantitative differences between school types, data from
 
 A bar chart, titled **"Conteggio tipologia scuola per Provincia"** (Count of school types per Province), was created and sorted in descending order based on the count.
 
-<br>
+
 
 ### 7.5 Key Findings & Visualization Adjustments:
 
@@ -270,7 +270,7 @@ The disparity in school count is significant (e.g., 15,681 records for "Scuola p
 
 To visualize the total number of schools per province, the data was extracted from the Pivot Table and used to generate a choropleth map of Italy.
 
-<br>
+
 
 ### 8.1 Map Creation Steps
 
@@ -278,7 +278,7 @@ To visualize the total number of schools per province, the data was extracted fr
 2.  **Column Renaming:** Columns D and E were renamed to **"Provincia"** and **"Numero di scuole per provincia"** (Number of schools per province), respectively.
 3.  **Map Generation:** Columns D and E were selected, and the map was generated using **Insert > Maps** (Excel automatically detects the geographic names and uses geocoding via Bing Maps to create the choropleth).
 
-<br>
+
 
 ### 8.2 Visualization and Analysis
 
